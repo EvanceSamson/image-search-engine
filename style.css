@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
 margin: 0;
 padding: 0;
@@ -5,23 +7,29 @@ font-family: "Poppins", serif;
 box-sizing: border-box;
 }
 body{
-    background: #39297b;
+    background: blueviolet;
     color: white;
+    width: 100%;
 }
 h1{
     text-align: center;
     margin: 100px auto 50px;
-    font-size: 600;
+    font-size: 33px;
+    font-weight: 400;
+
 }
+
+
 form{
-    width: 50%;
-    max-width: 600;
+    width: 90%;
+    max-width: 600px;
     margin: auto;
-    height: 80px;
+    height: 60px;
     background: #434989;
     display: flex;
     align-items: center;
     border-radius: 8px;
+    overflow: hidden;
 }
 form input{
     flex: 1;
@@ -30,24 +38,27 @@ form input{
     outline: 0;
     background: transparent;
     color: #fff;
-    font-size: 18px;
-    padding: 0 30px;
+    font-size: 16px;
+    padding: 0 15px;
+    min-width: 0;
 }
 form button{
-    padding: 0 40px;
+    padding: 0 18px;
     height: 100%;
     background: #ff3929;
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     border: 0;
     outline: 0;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     cursor: pointer;
+    white-space: nowrap;
 }
 ::placeholder{
     color: #fff;
     font-size: 18px;
+    opacity: 0.6;
 }
 #show-more-btn{
     background: #ff3929;
@@ -75,4 +86,33 @@ button:hover{
     height: 230px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+@media (max-width:720px){
+    h1{
+        font-size: 22px;
+    }
+
+    form{
+        width: 90%;
+        height: 52px;
+    }
+
+    form input{
+        font-size: 14px;
+        padding: 0 12px;
+    }
+
+    form button{
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    ::placeholder{
+        font-size: 14px;
+    }
+
+    #search-result{
+        grid-template-columns: 1fr;
+    }
 }
